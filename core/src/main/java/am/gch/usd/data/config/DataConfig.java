@@ -6,9 +6,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-/**
- * Created by garik on 2/21/16.
- */
 @Configuration
 @PropertySource("classpath:db-config.properties")
 @EntityScan("am.gch.usd.common.data.model")

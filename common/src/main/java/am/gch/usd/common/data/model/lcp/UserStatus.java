@@ -1,8 +1,5 @@
 package am.gch.usd.common.data.model.lcp;
 
-/**
- * Created by garik on 2/21/16.
- */
 public enum  UserStatus {
 
     PENDING     (1, "Pending",  "label.user.status.pending"),

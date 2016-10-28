@@ -19,31 +19,31 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Import(DataConfig.class)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-	/**
-	 * Configures the security of all http requests
+    /**
+     * Configures the security of all http requests
      */
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
 
-		http.authorizeRequests()
-			.antMatchers("/", "/register").permitAll()
-			.antMatchers("/webjars/**", "/css/**", "/js/**", "/images/**").permitAll()
-			.anyRequest().authenticated()
-			.and()
-			.formLogin()
-				.loginPage("/login")
-				.passwordParameter("password")
-				.usernameParameter("username")
-				.defaultSuccessUrl("/home").permitAll()
-			.and()
-			.logout()
-				.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-				.logoutSuccessUrl("/login?logout")
-				.invalidateHttpSession(true).permitAll()
-			.and()
-			.exceptionHandling()
-				.accessDeniedPage("/403");
-		/*
+        http.authorizeRequests()
+                .antMatchers("/", "/register").permitAll()
+                .antMatchers("/webjars/**", "/css/**", "/js/**", "/images/**").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .passwordParameter("password")
+                .usernameParameter("username")
+                .defaultSuccessUrl("/home").permitAll()
+                .and()
+                .logout()
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                .logoutSuccessUrl("/login?logout")
+                .invalidateHttpSession(true).permitAll()
+                .and()
+                .exceptionHandling()
+                .accessDeniedPage("/403");
+        /*
 		  	http
       		.httpBasic().and()
       		.authorizeRequests()
@@ -57,16 +57,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				  http.requiresChannel().anyRequest().requiresSecure();
 			  }
 		 */
-	}
+    }
 
-	/**
-	 * Passes instance of UserService to AuthenticationManagerBuilder
-	 * to be able to organize authentication
+    /**
+     * Passes instance of UserService to AuthenticationManagerBuilder
+     * to be able to organize authentication
      */
-	@Autowired
-	public void configureGlobal(AuthenticationManagerBuilder auth,
-								UserService userService) throws Exception {
-		auth.userDetailsService(userService)
-			.passwordEncoder(new BCryptPasswordEncoder());
-	}
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth,
+                                UserService userService) throws Exception {
+        auth.userDetailsService(userService)
+                .passwordEncoder(new BCryptPasswordEncoder());
+    }
 }

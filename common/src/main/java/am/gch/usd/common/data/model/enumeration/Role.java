@@ -1,12 +1,8 @@
 package am.gch.usd.common.data.model.enumeration;
 
-/**
- * Created by susto on 10/29/2016.
- */
 public enum Role {
 
     ADMIN       (1, "admin"),
-
     USER        (2, "user");
 
     private int key;

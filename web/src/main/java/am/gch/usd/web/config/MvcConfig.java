@@ -1,7 +1,5 @@
 package am.gch.usd.web.config;
 
-import am.gch.usd.web.interceptor.LoggingInterceptor;
-import am.gch.usd.web.interceptor.handler.AdminRequiredInterceptor;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.context.embedded.ErrorPage;
 import org.springframework.context.MessageSource;
@@ -17,9 +15,6 @@ import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
-/**
- * Created by garik on 2/21/16.
- */
 @Configuration
 @EnableWebMvc
 @ComponentScan
@@ -62,10 +57,10 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
                 .addResourceLocations(
-                    "classpath:/META-INF/resources/",
-                    "classpath:/resources/",
-                    "classpath:/static/",
-                    "classpath:/public/"
+                        "classpath:/META-INF/resources/",
+                        "classpath:/resources/",
+                        "classpath:/static/",
+                        "classpath:/public/"
                 );
     }
 
@@ -92,7 +87,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     }
 
     /**
-     *  Forwards the request to appropriate controller in case of errors
+     * Forwards the request to appropriate controller in case of errors
      */
     @Bean
     public EmbeddedServletContainerCustomizer containerCustomizer() {

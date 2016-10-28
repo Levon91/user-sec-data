@@ -6,9 +6,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Created by garik on 2/24/16.
- */
 public class LoggingInterceptor implements HandlerInterceptor {
 
     @Override

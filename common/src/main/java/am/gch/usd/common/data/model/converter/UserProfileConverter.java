@@ -6,9 +6,6 @@ import am.gch.usd.common.data.model.lcp.UserStatus;
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 
-/**
- * Created by garik on 2/26/16.
- */
 @Converter(autoApply = true)
 public class UserProfileConverter implements AttributeConverter<UserProfile, Integer> {
 

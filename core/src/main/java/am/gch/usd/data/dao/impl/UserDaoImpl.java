@@ -7,13 +7,9 @@ import am.gch.usd.data.dao.UserDao;
 import am.gch.usd.data.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Created by garik on 2/21/16.
- */
 @Service
 //@Transactional
 public class UserDaoImpl implements UserDao {

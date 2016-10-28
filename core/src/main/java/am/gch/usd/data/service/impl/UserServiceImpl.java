@@ -16,9 +16,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Created by garik on 2/21/16.
- */
 @Service
 @Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {

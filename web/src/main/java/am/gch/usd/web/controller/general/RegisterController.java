@@ -19,9 +19,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.validation.Valid;
 import java.util.Locale;
 
-/**
- * Created by garik on 2/26/16.
- */
 @Controller
 public class RegisterController {
 

@@ -1,6 +1,5 @@
 package am.gch.usd.web;
 
-import am.gch.usd.data.config.DataConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -8,17 +7,14 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-/**
- * Created by garik on 2/21/16.
- */
 @SpringBootApplication(
-   scanBasePackages = {
-        "am.gch.usd.web",
-        "am.gch.usd.data",
-        "am.gch.usd.common",
-           "am.gch.usd.data.repository",
-           "am.gch.usd.data.dao"
-    }
+        scanBasePackages = {
+                "am.gch.usd.web",
+                "am.gch.usd.data",
+                "am.gch.usd.common",
+                "am.gch.usd.data.repository",
+                "am.gch.usd.data.dao"
+        }
 )
 @EnableJpaRepositories
 @EnableTransactionManagement

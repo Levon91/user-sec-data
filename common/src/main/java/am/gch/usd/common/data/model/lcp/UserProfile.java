@@ -1,8 +1,5 @@
 package am.gch.usd.common.data.model.lcp;
 
-/**
- * Created by garik on 2/21/16.
- */
 public enum UserProfile {
 
     USER    (1, "User", "label.user.profile.user"),

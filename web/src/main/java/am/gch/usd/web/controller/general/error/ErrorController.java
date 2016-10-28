@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * Created by garik on 2/24/16.
- */
 @Controller
 public class ErrorController {
 

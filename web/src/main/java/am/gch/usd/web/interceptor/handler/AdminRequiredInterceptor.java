@@ -10,9 +10,6 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Created by garik on 2/25/16.
- */
 public class AdminRequiredInterceptor implements HandlerInterceptor {
 
     /**

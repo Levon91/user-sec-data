@@ -7,9 +7,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
-/**
- * Created by garik on 2/21/16.
- */
 public class SessionUser extends User implements UserDetails {
 
     public SessionUser(User user) {

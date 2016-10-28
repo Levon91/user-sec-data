@@ -9,9 +9,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 
-/**
- * Created by garik on 2/21/16.
- */
 @Entity
 @Table(name = "user")
 public class User {

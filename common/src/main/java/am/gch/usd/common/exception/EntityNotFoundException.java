@@ -1,8 +1,5 @@
 package am.gch.usd.common.exception;
 
-/**
- * Created by garik on 2/21/16.
- */
 public class EntityNotFoundException extends Exception {
 
     public EntityNotFoundException() {}

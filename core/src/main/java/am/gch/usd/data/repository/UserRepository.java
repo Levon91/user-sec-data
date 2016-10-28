@@ -12,9 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Created by garik on 2/21/16.
- */
 @Repository
 @Transactional
 public interface UserRepository extends JpaRepository<User, Long> {
